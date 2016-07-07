@@ -5,13 +5,13 @@
   ng-style="{ 'margin-left': colContainer.getMargin('left') + 'px', 'margin-right': colContainer.getMargin('right') + 'px' }">
   <!-- All of these dom elements are replaced in place -->
   <div ui-grid-header></div>
+  <ui-grid-footer
+    ng-if="grid.options.showColumnFooter">
+  </ui-grid-footer>
   <div ui-grid-viewport></div>
   <div
     ng-if="colContainer.needsHScrollbarPlaceholder()"
     class="ui-grid-scrollbar-placeholder"
     ng-style="{height:colContainer.grid.scrollbarHeight + 'px'}">
   </div>
-  <ui-grid-footer
-    ng-if="grid.options.showColumnFooter">
-  </ui-grid-footer>
 </div>
